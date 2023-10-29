@@ -3,6 +3,7 @@ import 'package:meals/data/dummy_data.dart';
 import "package:meals/widgets/category_widget.dart";
 
 class CategoriesScreen extends StatelessWidget {
+  static String id = "category";
   const CategoriesScreen({super.key});
   @override
   Widget build(BuildContext context) {

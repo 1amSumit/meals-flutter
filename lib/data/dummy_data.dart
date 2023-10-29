@@ -20,7 +20,8 @@ const dummyMeals = [
     id: 'm1',
     categories: ['Italian', 'Pasta'],
     title: 'Spaghetti with Tomato Sauce',
-    imgUrl: 'https://www.example.com/spaghetti.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Spaghetti', 'Tomato Sauce', 'Oregano', 'Olive Oil'],
     steps: [
       'Cook spaghetti according to package instructions.',
@@ -39,7 +40,8 @@ const dummyMeals = [
     id: 'm2',
     categories: ['Mexican', 'Fast Food'],
     title: 'Tacos',
-    imgUrl: 'https://www.example.com/tacos.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Tortillas', 'Ground Beef', 'Lettuce', 'Tomatoes', 'Cheese'],
     steps: [
       'Brown ground beef in a skillet.',
@@ -58,7 +60,8 @@ const dummyMeals = [
     id: 'm3',
     categories: ['Chinese', 'Vegetarian'],
     title: 'Vegetable Stir-Fry',
-    imgUrl: 'https://www.example.com/stirfry.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Mixed Vegetables', 'Soy Sauce', 'Ginger', 'Garlic', 'Rice'],
     steps: [
       'Heat oil in a wok or skillet.',
@@ -77,7 +80,8 @@ const dummyMeals = [
     id: 'm4',
     categories: ['American', 'Meat'],
     title: 'BBQ Ribs',
-    imgUrl: 'https://www.example.com/ribs.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Pork Ribs', 'BBQ Sauce', 'Salt', 'Pepper'],
     steps: [
       'Preheat the grill.',
@@ -96,7 +100,8 @@ const dummyMeals = [
     id: 'm5',
     categories: ['Mediterranean', 'Seafood'],
     title: 'Grilled Salmon',
-    imgUrl: 'https://www.example.com/salmon.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Salmon Fillet', 'Lemon', 'Olive Oil', 'Herbs'],
     steps: [
       'Preheat the grill.',
@@ -115,7 +120,8 @@ const dummyMeals = [
     id: 'm6',
     categories: ['Indian', 'Vegetarian'],
     title: 'Vegetable Curry',
-    imgUrl: 'https://www.example.com/curry.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Mixed Vegetables', 'Curry Sauce', 'Rice'],
     steps: ['Cook mixed vegetables in curry sauce.', 'Serve over cooked rice.'],
     duration: 35,
@@ -130,7 +136,8 @@ const dummyMeals = [
     id: 'm7',
     categories: ['Italian', 'Pizza'],
     title: 'Margherita Pizza',
-    imgUrl: 'https://www.example.com/pizza.jpg',
+    imgUrl:
+        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
     ingredients: ['Pizza Dough', 'Tomato Sauce', 'Mozzarella Cheese', 'Basil'],
     steps: [
       'Roll out pizza dough, add tomato sauce, cheese, and basil.',

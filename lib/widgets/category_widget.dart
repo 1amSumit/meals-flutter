@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:meals/modals/category.dart";
+import 'package:meals/screens/meals.dart';
+import "package:meals/data/dummy_data.dart";
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({super.key, required this.category});
@@ -9,7 +11,15 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (ctx) =>
+                MealScreen(title: category.title, meals: dummyMeals),
+          ),
+        );
+      },
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(10),
       child: Container(
