@@ -15,8 +15,11 @@ class CategoryItem extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (ctx) =>
-                MealScreen(title: category.title, meals: dummyMeals),
+            builder: (ctx) => MealScreen(
+                title: category.title,
+                meals: dummyMeals
+                    .where((meal) => meal.categories.contains(category.title))
+                    .toList()),
           ),
         );
       },

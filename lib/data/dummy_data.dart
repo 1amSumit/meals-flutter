@@ -9,10 +9,10 @@ const availableCategories = [
   Category(id: "c4", title: "Europian", color: Colors.yellow),
   Category(id: "c5", title: "Asian", color: Colors.cyan),
   Category(id: "c6", title: "Summer", color: Colors.brown),
-  Category(id: "c7", title: "Winter", color: Colors.green),
+  Category(id: "c7", title: "Japanese", color: Colors.green),
   Category(id: "c8", title: "Egyptian", color: Colors.lightBlueAccent),
-  Category(id: "c9", title: "Roman", color: Colors.cyanAccent),
-  Category(id: "c10", title: "Celtic", color: Colors.purple),
+  Category(id: "c9", title: "Greek", color: Colors.cyanAccent),
+  Category(id: "c10", title: "Mexican", color: Colors.purple),
 ];
 
 const dummyMeals = [
@@ -38,7 +38,7 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm2',
-    categories: ['Mexican', 'Fast Food'],
+    categories: ['Mexican', 'Fast Food', 'French'],
     title: 'Tacos',
     imgUrl:
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
@@ -58,7 +58,7 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm3',
-    categories: ['Chinese', 'Vegetarian'],
+    categories: ['Chinese', 'Vegetarian', 'Thai'],
     title: 'Vegetable Stir-Fry',
     imgUrl:
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
@@ -78,7 +78,7 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm4',
-    categories: ['American', 'Meat'],
+    categories: ['American', 'Meat', 'Europian'],
     title: 'BBQ Ribs',
     imgUrl:
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
@@ -98,7 +98,7 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm5',
-    categories: ['Mediterranean', 'Seafood'],
+    categories: ['Mediterranean', 'Seafood', 'Europian'],
     title: 'Grilled Salmon',
     imgUrl:
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
@@ -118,7 +118,7 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm6',
-    categories: ['Indian', 'Vegetarian'],
+    categories: ['Indian', 'Vegetarian', 'Asian'],
     title: 'Vegetable Curry',
     imgUrl:
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
@@ -134,7 +134,7 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm7',
-    categories: ['Italian', 'Pizza'],
+    categories: ['Egyptian', 'Pizza', 'Summer'],
     title: 'Margherita Pizza',
     imgUrl:
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
