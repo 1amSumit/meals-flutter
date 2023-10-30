@@ -21,7 +21,7 @@ const dummyMeals = [
     categories: ['Italian', 'Pasta'],
     title: 'Spaghetti with Tomato Sauce',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdGF8ZW58MHx8MHx8fDA%3D',
     ingredients: ['Spaghetti', 'Tomato Sauce', 'Oregano', 'Olive Oil'],
     steps: [
       'Cook spaghetti according to package instructions.',
@@ -41,7 +41,7 @@ const dummyMeals = [
     categories: ['Mexican', 'Fast Food', 'French'],
     title: 'Tacos',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://images.unsplash.com/photo-1599789197514-47270cd526b4?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWV4aWNhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D',
     ingredients: ['Tortillas', 'Ground Beef', 'Lettuce', 'Tomatoes', 'Cheese'],
     steps: [
       'Brown ground beef in a skillet.',
@@ -61,7 +61,7 @@ const dummyMeals = [
     categories: ['Chinese', 'Vegetarian', 'Thai'],
     title: 'Vegetable Stir-Fry',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://plus.unsplash.com/premium_photo-1661265946882-e2a01db641d4?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8fDA%3D',
     ingredients: ['Mixed Vegetables', 'Soy Sauce', 'Ginger', 'Garlic', 'Rice'],
     steps: [
       'Heat oil in a wok or skillet.',
@@ -81,7 +81,7 @@ const dummyMeals = [
     categories: ['American', 'Meat', 'Europian'],
     title: 'BBQ Ribs',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://images.unsplash.com/photo-1645734982188-e9603aa87de6?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QW1lcmljYW4lMjBmb29kfGVufDB8fDB8fHww',
     ingredients: ['Pork Ribs', 'BBQ Sauce', 'Salt', 'Pepper'],
     steps: [
       'Preheat the grill.',
@@ -101,7 +101,7 @@ const dummyMeals = [
     categories: ['Mediterranean', 'Seafood', 'Europian'],
     title: 'Grilled Salmon',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2VhZm9vZCUyMGZvb2R8ZW58MHx8MHx8fDA%3D',
     ingredients: ['Salmon Fillet', 'Lemon', 'Olive Oil', 'Herbs'],
     steps: [
       'Preheat the grill.',
@@ -121,7 +121,7 @@ const dummyMeals = [
     categories: ['Indian', 'Vegetarian', 'Asian'],
     title: 'Vegetable Curry',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://images.unsplash.com/photo-1562259819-3ffa9f9a77f3?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D',
     ingredients: ['Mixed Vegetables', 'Curry Sauce', 'Rice'],
     steps: ['Cook mixed vegetables in curry sauce.', 'Serve over cooked rice.'],
     duration: 35,
@@ -137,7 +137,7 @@ const dummyMeals = [
     categories: ['Egyptian', 'Pizza', 'Summer'],
     title: 'Margherita Pizza',
     imgUrl:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.puckarabia.com%2Fen%2Frecipes%2Fspaghetti-bolognese-arabia%2F&psig=AOvVaw2hxDXv5VdEz3YOQ4LFMt-8&ust=1698672379239000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDwjfCtm4IDFQAAAAAdAAAAABAE',
+        'https://images.unsplash.com/photo-1681225654713-aeebafc6f6f2?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWd5cHRpb24lMjBmb29kfGVufDB8fDB8fHww',
     ingredients: ['Pizza Dough', 'Tomato Sauce', 'Mozzarella Cheese', 'Basil'],
     steps: [
       'Roll out pizza dough, add tomato sauce, cheese, and basil.',
@@ -156,7 +156,8 @@ const dummyMeals = [
     id: 'm8',
     categories: ['Japanese', 'Seafood'],
     title: 'Sushi Rolls',
-    imgUrl: 'https://www.example.com/sushi.jpg',
+    imgUrl:
+        'https://images.unsplash.com/photo-1519984388953-d2406bc725e1?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SmFwYW5lc2UlMjBmb29kfGVufDB8fDB8fHww',
     ingredients: ['Sushi Rice', 'Nori Seaweed', 'Fresh Fish', 'Vegetables'],
     steps: [
       'Lay out nori seaweed, add sushi rice, fish, and vegetables.',
@@ -175,7 +176,8 @@ const dummyMeals = [
     id: 'm9',
     categories: ['Greek', 'Vegetarian'],
     title: 'Greek Salad',
-    imgUrl: 'https://www.example.com/salad.jpg',
+    imgUrl:
+        'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8R3JlZWslMjBTYWxhZHxlbnwwfHwwfHx8MA%3D%3D',
     ingredients: [
       'Cucumbers',
       'Tomatoes',
@@ -199,7 +201,8 @@ const dummyMeals = [
     id: 'm10',
     categories: ['Mexican', 'Vegetarian'],
     title: 'Vegetarian Burrito',
-    imgUrl: 'https://www.example.com/burrito.jpg',
+    imgUrl:
+        'https://plus.unsplash.com/premium_photo-1664478244517-513dc18af854?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmVnZXRhcmlhbiUyMEJ1cnJpdG98ZW58MHx8MHx8fDA%3D',
     ingredients: ['Tortilla', 'Black Beans', 'Rice', 'Salsa', 'Guacamole'],
     steps: [
       'Fill tortilla with black beans, rice, salsa, and guacamole.',
