@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import "package:meals/modals/meal.dart";
+import 'package:meals/screens/meal_details.dart';
+import 'package:meals/widgets/meal_item_traits.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
   const MealItem({required this.meal});
 
   final Meal meal;
+
+  String get complixityText {
+    return meal.complexity.name[0].toUpperCase() +
+        meal.complexity.name.substring(1);
+  }
+
+  String get affordabilityText {
+    return meal.affordability.name[0].toUpperCase() +
+        meal.affordability.name.substring(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +29,13 @@ class MealItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       elevation: 8.0,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+            return MealDetailsScreen(
+              meal: meal,
+            );
+          }));
+        },
         child: Stack(
           children: [
             FadeInImage(
@@ -52,7 +70,21 @@ class MealItem extends StatelessWidget {
                       height: 12,
                     ),
                     Row(
-                      children: [],
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MealItemTraits(
+                          label: '${meal.duration} min',
+                          icon: Icons.schedule,
+                        ),
+                        MealItemTraits(
+                          label: '$complixityText',
+                          icon: Icons.work,
+                        ),
+                        MealItemTraits(
+                          label: '$affordabilityText',
+                          icon: Icons.attach_money,
+                        )
+                      ],
                     ),
                   ],
                 ),
