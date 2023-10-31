@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:meals/screens/meals.dart';
 
 class SideDrawer extends StatelessWidget {
-  const SideDrawer({super.key});
+  const SideDrawer({super.key, required this.setScreen});
+
+  final void Function(String identifier) setScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,9 @@ class SideDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () {
+              setScreen("meals");
+            },
             leading: Icon(
               Icons.restaurant,
               size: 26,
@@ -60,7 +63,9 @@ class SideDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () {
+              setScreen("filter");
+            },
             leading: Icon(
               Icons.settings,
               size: 26,

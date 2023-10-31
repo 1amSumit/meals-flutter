@@ -27,6 +27,13 @@ class _TabsScreenState extends State<TabsScreen> {
     );
   }
 
+  void _setDrawerPage(String screenName) {
+    if (screenName == "filter") {
+    } else {
+      Navigator.pop(context);
+    }
+  }
+
   void _toggleFavouriteMeals(Meal meal) {
     final isExixting = _favouriteMeals.contains(meal);
 
@@ -72,7 +79,9 @@ class _TabsScreenState extends State<TabsScreen> {
         ),
       ),
       body: activePage,
-      drawer: const SideDrawer(),
+      drawer: SideDrawer(
+        setScreen: _setDrawerPage,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPageIndex,
         onTap: (index) => _selectPage(index),
