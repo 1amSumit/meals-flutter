@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import "package:meals/modals/category.dart";
 import 'package:meals/screens/meals.dart';
 import "package:meals/data/dummy_data.dart";
+import "package:meals/modals/meal.dart";
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key, required this.category});
+  const CategoryItem({
+    super.key,
+    required this.category,
+    required this.toggleFavourite,
+  });
 
   final Category category;
+  final void Function(Meal meal) toggleFavourite;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +22,7 @@ class CategoryItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (ctx) => MealScreen(
+                toggleFavourite: toggleFavourite,
                 title: category.title,
                 meals: dummyMeals
                     .where((meal) => meal.categories.contains(category.title))
