@@ -1,219 +1,409 @@
+import 'package:flutter/material.dart';
+
 import "package:meals/modals/category.dart";
 import "package:meals/modals/meal.dart";
-import "package:flutter/material.dart";
 
+// Constants in Dart should be written in lowerCamelcase.
 const availableCategories = [
-  Category(id: "c1", title: "Italian", color: Colors.purple),
-  Category(id: "c2", title: "French", color: Colors.red),
-  Category(id: "c3", title: "Thai", color: Colors.orange),
-  Category(id: "c4", title: "Europian", color: Colors.yellow),
-  Category(id: "c5", title: "Asian", color: Colors.cyan),
-  Category(id: "c6", title: "Summer", color: Colors.brown),
-  Category(id: "c7", title: "Japanese", color: Colors.green),
-  Category(id: "c8", title: "Egyptian", color: Colors.lightBlueAccent),
-  Category(id: "c9", title: "Greek", color: Colors.cyanAccent),
-  Category(id: "c10", title: "Mexican", color: Colors.purple),
+  Category(
+    id: 'c1',
+    title: 'Italian',
+    color: Colors.purple,
+  ),
+  Category(
+    id: 'c2',
+    title: 'Quick & Easy',
+    color: Colors.red,
+  ),
+  Category(
+    id: 'c3',
+    title: 'Hamburgers',
+    color: Colors.orange,
+  ),
+  Category(
+    id: 'c4',
+    title: 'German',
+    color: Colors.amber,
+  ),
+  Category(
+    id: 'c5',
+    title: 'Light & Lovely',
+    color: Colors.blue,
+  ),
+  Category(
+    id: 'c6',
+    title: 'Exotic',
+    color: Colors.green,
+  ),
+  Category(
+    id: 'c7',
+    title: 'Breakfast',
+    color: Colors.lightBlue,
+  ),
+  Category(
+    id: 'c8',
+    title: 'Asian',
+    color: Colors.lightGreen,
+  ),
+  Category(
+    id: 'c9',
+    title: 'French',
+    color: Colors.pink,
+  ),
+  Category(
+    id: 'c10',
+    title: 'Summer',
+    color: Colors.teal,
+  ),
 ];
 
 const dummyMeals = [
   Meal(
     id: 'm1',
-    categories: ['Italian', 'Pasta'],
-    title: 'Spaghetti with Tomato Sauce',
-    imgUrl:
-        'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdGF8ZW58MHx8MHx8fDA%3D',
-    ingredients: ['Spaghetti', 'Tomato Sauce', 'Oregano', 'Olive Oil'],
-    steps: [
-      'Cook spaghetti according to package instructions.',
-      'Heat olive oil, add tomato sauce, and season with oregano.',
-      'Serve over cooked spaghetti.'
+    categories: [
+      'c1',
+      'c2',
     ],
-    duration: 30,
+    title: 'Spaghetti with Tomato Sauce',
+    affordability: Affordability.affordable,
     complexity: Complexity.simple,
-    affordability: Affordability.pricey,
+    imageUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+    duration: 20,
+    ingredients: [
+      '4 Tomatoes',
+      '1 Tablespoon of Olive Oil',
+      '1 Onion',
+      '250g Spaghetti',
+      'Spices',
+      'Cheese (optional)'
+    ],
+    steps: [
+      'Cut the tomatoes and the onion into small pieces.',
+      'Boil some water - add salt to it once it boils.',
+      'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
+      'In the meantime, heaten up some olive oil and add the cut onion.',
+      'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
+      'The sauce will be done once the spaghetti are.',
+      'Feel free to add some cheese on top of the finished dish.'
+    ],
     isGlutenFree: false,
-    isLactoseFree: true,
     isVegan: true,
     isVegetarian: true,
+    isLactoseFree: true,
   ),
   Meal(
     id: 'm2',
-    categories: ['Mexican', 'Fast Food', 'French'],
-    title: 'Tacos',
-    imgUrl:
-        'https://images.unsplash.com/photo-1599789197514-47270cd526b4?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWV4aWNhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D',
-    ingredients: ['Tortillas', 'Ground Beef', 'Lettuce', 'Tomatoes', 'Cheese'],
-    steps: [
-      'Brown ground beef in a skillet.',
-      'Place tortillas on a flat surface and fill with beef, lettuce, tomatoes, and cheese.',
-      'Fold in half and serve hot.'
+    categories: [
+      'c2',
     ],
-    duration: 20,
-    complexity: Complexity.simple,
+    title: 'Toast Hawaii',
     affordability: Affordability.affordable,
+    complexity: Complexity.simple,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
+    duration: 10,
+    ingredients: [
+      '1 Slice White Bread',
+      '1 Slice Ham',
+      '1 Slice Pineapple',
+      '1-2 Slices of Cheese',
+      'Butter'
+    ],
+    steps: [
+      'Butter one side of the white bread',
+      'Layer ham, the pineapple and cheese on the white bread',
+      'Bake the toast for round about 10 minutes in the oven at 200°C'
+    ],
     isGlutenFree: false,
-    isLactoseFree: false,
     isVegan: false,
     isVegetarian: false,
+    isLactoseFree: false,
   ),
   Meal(
     id: 'm3',
-    categories: ['Chinese', 'Vegetarian', 'Thai'],
-    title: 'Vegetable Stir-Fry',
-    imgUrl:
-        'https://plus.unsplash.com/premium_photo-1661265946882-e2a01db641d4?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8fDA%3D',
-    ingredients: ['Mixed Vegetables', 'Soy Sauce', 'Ginger', 'Garlic', 'Rice'],
-    steps: [
-      'Heat oil in a wok or skillet.',
-      'Add ginger and garlic, then stir-fry mixed vegetables.',
-      'Season with soy sauce and serve over cooked rice.'
+    categories: [
+      'c2',
+      'c3',
     ],
-    duration: 25,
+    title: 'Classic Hamburger',
+    affordability: Affordability.pricey,
     complexity: Complexity.simple,
-    affordability: Affordability.affordable,
-    isGlutenFree: true,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
+    duration: 45,
+    ingredients: [
+      '300g Cattle Hack',
+      '1 Tomato',
+      '1 Cucumber',
+      '1 Onion',
+      'Ketchup',
+      '2 Burger Buns'
+    ],
+    steps: [
+      'Form 2 patties',
+      'Fry the patties for c. 4 minutes on each side',
+      'Quickly fry the buns for c. 1 minute on each side',
+      'Bruch buns with ketchup',
+      'Serve burger with tomato, cucumber and onion'
+    ],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
     isLactoseFree: true,
-    isVegan: true,
-    isVegetarian: true,
   ),
   Meal(
     id: 'm4',
-    categories: ['American', 'Meat', 'Europian'],
-    title: 'BBQ Ribs',
-    imgUrl:
-        'https://images.unsplash.com/photo-1645734982188-e9603aa87de6?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QW1lcmljYW4lMjBmb29kfGVufDB8fDB8fHww',
-    ingredients: ['Pork Ribs', 'BBQ Sauce', 'Salt', 'Pepper'],
-    steps: [
-      'Preheat the grill.',
-      'Season ribs with salt and pepper, then grill and baste with BBQ sauce until cooked through.',
-      'Serve hot.'
+    categories: [
+      'c4',
     ],
+    title: 'Wiener Schnitzel',
+    affordability: Affordability.luxurious,
+    complexity: Complexity.challenging,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
     duration: 60,
-    complexity: Complexity.simple,
-    affordability: Affordability.pricey,
-    isGlutenFree: true,
-    isLactoseFree: true,
+    ingredients: [
+      '8 Veal Cutlets',
+      '4 Eggs',
+      '200g Bread Crumbs',
+      '100g Flour',
+      '300ml Butter',
+      '100g Vegetable Oil',
+      'Salt',
+      'Lemon Slices'
+    ],
+    steps: [
+      'Tenderize the veal to about 2–4mm, and salt on both sides.',
+      'On a flat plate, stir the eggs briefly with a fork.',
+      'Lightly coat the cutlets in flour then dip into the egg, and finally, coat in breadcrumbs.',
+      'Heat the butter and oil in a large pan (allow the fat to get very hot) and fry the schnitzels until golden brown on both sides.',
+      'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes ‘fluffy’.',
+      'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
+      'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
+    ],
+    isGlutenFree: false,
     isVegan: false,
     isVegetarian: false,
+    isLactoseFree: false,
   ),
   Meal(
     id: 'm5',
-    categories: ['Mediterranean', 'Seafood', 'Europian'],
-    title: 'Grilled Salmon',
-    imgUrl:
-        'https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2VhZm9vZCUyMGZvb2R8ZW58MHx8MHx8fDA%3D',
-    ingredients: ['Salmon Fillet', 'Lemon', 'Olive Oil', 'Herbs'],
-    steps: [
-      'Preheat the grill.',
-      'Brush salmon with olive oil, lemon, and herbs, then grill until cooked.',
-      'Serve with a side of your choice.'
+    categories: [
+      'c2'
+          'c5',
+      'c10',
     ],
-    duration: 25,
+    title: 'Salad with Smoked Salmon',
+    affordability: Affordability.luxurious,
     complexity: Complexity.simple,
-    affordability: Affordability.pricey,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
+    duration: 15,
+    ingredients: [
+      'Arugula',
+      'Lamb\'s Lettuce',
+      'Parsley',
+      'Fennel',
+      '200g Smoked Salmon',
+      'Mustard',
+      'Balsamic Vinegar',
+      'Olive Oil',
+      'Salt and Pepper'
+    ],
+    steps: [
+      'Wash and cut salad and herbs',
+      'Dice the salmon',
+      'Process mustard, vinegar and olive oil into a dessing',
+      'Prepare the salad',
+      'Add salmon cubes and dressing'
+    ],
     isGlutenFree: true,
-    isLactoseFree: true,
     isVegan: false,
-    isVegetarian: false,
+    isVegetarian: true,
+    isLactoseFree: true,
   ),
   Meal(
     id: 'm6',
-    categories: ['Indian', 'Vegetarian', 'Asian'],
-    title: 'Vegetable Curry',
-    imgUrl:
-        'https://images.unsplash.com/photo-1562259819-3ffa9f9a77f3?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D',
-    ingredients: ['Mixed Vegetables', 'Curry Sauce', 'Rice'],
-    steps: ['Cook mixed vegetables in curry sauce.', 'Serve over cooked rice.'],
-    duration: 35,
-    complexity: Complexity.simple,
+    categories: [
+      'c6',
+      'c10',
+    ],
+    title: 'Delicious Orange Mousse',
     affordability: Affordability.affordable,
+    complexity: Complexity.hard,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
+    duration: 240,
+    ingredients: [
+      '4 Sheets of Gelatine',
+      '150ml Orange Juice',
+      '80g Sugar',
+      '300g Yoghurt',
+      '200g Cream',
+      'Orange Peel',
+    ],
+    steps: [
+      'Dissolve gelatine in pot',
+      'Add orange juice and sugar',
+      'Take pot off the stove',
+      'Add 2 tablespoons of yoghurt',
+      'Stir gelatin under remaining yoghurt',
+      'Cool everything down in the refrigerator',
+      'Whip the cream and lift it under die orange mass',
+      'Cool down again for at least 4 hours',
+      'Serve with orange peel',
+    ],
     isGlutenFree: true,
-    isLactoseFree: true,
-    isVegan: true,
+    isVegan: false,
     isVegetarian: true,
+    isLactoseFree: false,
   ),
   Meal(
     id: 'm7',
-    categories: ['Egyptian', 'Pizza', 'Summer'],
-    title: 'Margherita Pizza',
-    imgUrl:
-        'https://images.unsplash.com/photo-1681225654713-aeebafc6f6f2?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWd5cHRpb24lMjBmb29kfGVufDB8fDB8fHww',
-    ingredients: ['Pizza Dough', 'Tomato Sauce', 'Mozzarella Cheese', 'Basil'],
-    steps: [
-      'Roll out pizza dough, add tomato sauce, cheese, and basil.',
-      'Bake in a preheated oven until golden brown.',
-      'Slice and serve.'
+    categories: [
+      'c7',
     ],
-    duration: 30,
-    complexity: Complexity.simple,
+    title: 'Pancakes',
     affordability: Affordability.affordable,
-    isGlutenFree: false,
-    isLactoseFree: false,
+    complexity: Complexity.simple,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
+    duration: 20,
+    ingredients: [
+      '1 1/2 Cups all-purpose Flour',
+      '3 1/2 Teaspoons Baking Powder',
+      '1 Teaspoon Salt',
+      '1 Tablespoon White Sugar',
+      '1 1/4 cups Milk',
+      '1 Egg',
+      '3 Tablespoons Butter, melted',
+    ],
+    steps: [
+      'In a large bowl, sift together the flour, baking powder, salt and sugar.',
+      'Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.',
+      'Heat a lightly oiled griddle or frying pan over medium high heat.',
+      'Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.'
+    ],
+    isGlutenFree: true,
     isVegan: false,
     isVegetarian: true,
+    isLactoseFree: false,
   ),
   Meal(
     id: 'm8',
-    categories: ['Japanese', 'Seafood'],
-    title: 'Sushi Rolls',
-    imgUrl:
-        'https://images.unsplash.com/photo-1519984388953-d2406bc725e1?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SmFwYW5lc2UlMjBmb29kfGVufDB8fDB8fHww',
-    ingredients: ['Sushi Rice', 'Nori Seaweed', 'Fresh Fish', 'Vegetables'],
-    steps: [
-      'Lay out nori seaweed, add sushi rice, fish, and vegetables.',
-      'Roll up and cut into bite-sized pieces.',
-      'Serve with soy sauce and wasabi.'
+    categories: [
+      'c8',
     ],
-    duration: 45,
-    complexity: Complexity.simple,
+    title: 'Creamy Indian Chicken Curry',
     affordability: Affordability.pricey,
-    isGlutenFree: false,
-    isLactoseFree: true,
+    complexity: Complexity.challenging,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
+    duration: 35,
+    ingredients: [
+      '4 Chicken Breasts',
+      '1 Onion',
+      '2 Cloves of Garlic',
+      '1 Piece of Ginger',
+      '4 Tablespoons Almonds',
+      '1 Teaspoon Cayenne Pepper',
+      '500ml Coconut Milk',
+    ],
+    steps: [
+      'Slice and fry the chicken breast',
+      'Process onion, garlic and ginger into paste and sauté everything',
+      'Add spices and stir fry',
+      'Add chicken breast + 250ml of water and cook everything for 10 minutes',
+      'Add coconut milk',
+      'Serve with rice'
+    ],
+    isGlutenFree: true,
     isVegan: false,
     isVegetarian: false,
+    isLactoseFree: true,
   ),
   Meal(
     id: 'm9',
-    categories: ['Greek', 'Vegetarian'],
-    title: 'Greek Salad',
-    imgUrl:
-        'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8R3JlZWslMjBTYWxhZHxlbnwwfHwwfHx8MA%3D%3D',
+    categories: [
+      'c9',
+    ],
+    title: 'Chocolate Souffle',
+    affordability: Affordability.affordable,
+    complexity: Complexity.hard,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
+    duration: 45,
     ingredients: [
-      'Cucumbers',
-      'Tomatoes',
-      'Olives',
-      'Feta Cheese',
-      'Olive Oil'
+      '1 Teaspoon melted Butter',
+      '2 Tablespoons white Sugar',
+      '2 Ounces 70% dark Chocolate, broken into pieces',
+      '1 Tablespoon Butter',
+      '1 Tablespoon all-purpose Flour',
+      '4 1/3 tablespoons cold Milk',
+      '1 Pinch Salt',
+      '1 Pinch Cayenne Pepper',
+      '1 Large Egg Yolk',
+      '2 Large Egg Whites',
+      '1 Pinch Cream of Tartar',
+      '1 Tablespoon white Sugar',
     ],
     steps: [
-      'Chop cucumbers, tomatoes, and olives, then crumble feta cheese on top.',
-      'Drizzle with olive oil and serve cold.'
+      'Preheat oven to 190°C. Line a rimmed baking sheet with parchment paper.',
+      'Brush bottom and sides of 2 ramekins lightly with 1 teaspoon melted butter; cover bottom and sides right up to the rim.',
+      'Add 1 tablespoon white sugar to ramekins. Rotate ramekins until sugar coats all surfaces.',
+      'Place chocolate pieces in a metal mixing bowl.',
+      'Place bowl over a pan of about 3 cups hot water over low heat.',
+      'Melt 1 tablespoon butter in a skillet over medium heat. Sprinkle in flour. Whisk until flour is incorporated into butter and mixture thickens.',
+      'Whisk in cold milk until mixture becomes smooth and thickens. Transfer mixture to bowl with melted chocolate.',
+      'Add salt and cayenne pepper. Mix together thoroughly. Add egg yolk and mix to combine.',
+      'Leave bowl above the hot (not simmering) water to keep chocolate warm while you whip the egg whites.',
+      'Place 2 egg whites in a mixing bowl; add cream of tartar. Whisk until mixture begins to thicken and a drizzle from the whisk stays on the surface about 1 second before disappearing into the mix.',
+      'Add 1/3 of sugar and whisk in. Whisk in a bit more sugar about 15 seconds.',
+      'whisk in the rest of the sugar. Continue whisking until mixture is about as thick as shaving cream and holds soft peaks, 3 to 5 minutes.',
+      'Transfer a little less than half of egg whites to chocolate.',
+      'Mix until egg whites are thoroughly incorporated into the chocolate.',
+      'Add the rest of the egg whites; gently fold into the chocolate with a spatula, lifting from the bottom and folding over.',
+      'Stop mixing after the egg white disappears. Divide mixture between 2 prepared ramekins. Place ramekins on prepared baking sheet.',
+      'Bake in preheated oven until scuffles are puffed and have risen above the top of the rims, 12 to 15 minutes.',
     ],
-    duration: 15,
-    complexity: Complexity.simple,
-    affordability: Affordability.affordable,
     isGlutenFree: true,
-    isLactoseFree: false,
     isVegan: false,
     isVegetarian: true,
+    isLactoseFree: false,
   ),
   Meal(
     id: 'm10',
-    categories: ['Mexican', 'Vegetarian'],
-    title: 'Vegetarian Burrito',
-    imgUrl:
-        'https://plus.unsplash.com/premium_photo-1664478244517-513dc18af854?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmVnZXRhcmlhbiUyMEJ1cnJpdG98ZW58MHx8MHx8fDA%3D',
-    ingredients: ['Tortilla', 'Black Beans', 'Rice', 'Salsa', 'Guacamole'],
-    steps: [
-      'Fill tortilla with black beans, rice, salsa, and guacamole.',
-      'Fold and serve hot or as a burrito bowl.'
+    categories: [
+      'c2',
+      'c5',
+      'c10',
     ],
-    duration: 20,
+    title: 'Asparagus Salad with Cherry Tomatoes',
+    affordability: Affordability.luxurious,
     complexity: Complexity.simple,
-    affordability: Affordability.affordable,
-    isGlutenFree: false,
-    isLactoseFree: true,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
+    duration: 30,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
     isVegan: true,
     isVegetarian: true,
+    isLactoseFree: true,
   ),
 ];

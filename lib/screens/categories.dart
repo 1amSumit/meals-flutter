@@ -7,9 +7,10 @@ class CategoriesScreen extends StatelessWidget {
   static String id = "category";
   const CategoriesScreen({
     super.key,
-    required this.toggleFavourite,
+    required this.availableMeals,
   });
-  final void Function(Meal meal) toggleFavourite;
+  final List<Meal> availableMeals;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +26,7 @@ class CategoriesScreen extends StatelessWidget {
           for (final category in availableCategories)
             CategoryItem(
               category: category,
-              toggleFavourite: toggleFavourite,
+              availableMeals: availableMeals,
             ),
         ],
       ),

@@ -7,11 +7,10 @@ import 'package:transparent_image/transparent_image.dart';
 class MealItem extends StatelessWidget {
   const MealItem({
     required this.meal,
-    required this.toggleFavourite,
   });
 
   final Meal meal;
-  final void Function(Meal meal) toggleFavourite;
+
   String get complixityText {
     return meal.complexity.name[0].toUpperCase() +
         meal.complexity.name.substring(1);
@@ -35,7 +34,6 @@ class MealItem extends StatelessWidget {
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (ctx) {
             return MealDetailsScreen(
-              toggleFavourite: toggleFavourite,
               meal: meal,
             );
           }));
@@ -44,7 +42,7 @@ class MealItem extends StatelessWidget {
           children: [
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
-              image: NetworkImage(meal.imgUrl),
+              image: NetworkImage(meal.imageUrl),
               fit: BoxFit.cover,
               height: 200,
               width: double.infinity,
