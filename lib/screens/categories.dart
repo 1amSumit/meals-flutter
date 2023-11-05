@@ -28,6 +28,8 @@ class _CategoriesScreenState extends State<CategoriesScreen>
       lowerBound: 0,
       upperBound: 1,
     );
+
+    _animationController.forward();
   }
 
   @override
@@ -39,21 +41,34 @@ class _CategoriesScreenState extends State<CategoriesScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView(
-        padding: const EdgeInsets.all(24.0),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
+      body: AnimatedBuilder(
+        animation: _animationController,
+        child: GridView(
+          padding: const EdgeInsets.all(24.0),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 3 / 2,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 20,
+          ),
+          children: [
+            for (final category in availableCategories)
+              CategoryItem(
+                category: category,
+                availableMeals: widget.availableMeals,
+              ),
+          ],
         ),
-        children: [
-          for (final category in availableCategories)
-            CategoryItem(
-              category: category,
-              availableMeals: widget.availableMeals,
-            ),
-        ],
+        builder: (ctx, child) => SlideTransition(
+          position: Tween(
+            begin: const Offset(0, 0.4),
+            end: const Offset(0, 0),
+          ).animate(
+            CurvedAnimation(
+                parent: _animationController, curve: Curves.easeInOut),
+          ),
+          child: child,
+        ),
       ),
     );
   }
