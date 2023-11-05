@@ -1,21 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals/screens/tabs.dart';
 import 'package:meals/widgets/side_drawer.dart';
+import "package:meals/provider/filters_provider.dart";
 
-enum Filter { glutanFree, lactoseFree, vegetarian, vegan }
-
-class FilterScreen extends StatefulWidget {
+class FilterScreen extends ConsumerStatefulWidget {
   const FilterScreen({super.key});
 
   @override
-  State<FilterScreen> createState() => _FilterScreenState();
+  ConsumerState<FilterScreen> createState() => _FilterScreenState();
 }
 
-class _FilterScreenState extends State<FilterScreen> {
+class _FilterScreenState extends ConsumerState<FilterScreen> {
   bool _glutenFreeFilter = false;
   bool _lactoseFreeFilter = false;
   bool _vegetarianFreeFilter = false;
   bool _veganFreeFilter = false;
+
+  @override
+  void initState() {
+    super.initState();
+    final activeFilter = ref.read(filtersProvider);
+    _glutenFreeFilter = activeFilter[Filter.glutanFree]!;
+    _lactoseFreeFilter = activeFilter[Filter.lactoseFree]!;
+    _vegetarianFreeFilter = activeFilter[Filter.vegetarian]!;
+    _veganFreeFilter = activeFilter[Filter.vegan]!;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,13 +48,13 @@ class _FilterScreenState extends State<FilterScreen> {
       }),
       body: WillPopScope(
         onWillPop: () async {
-          Navigator.of(context).pop({
+          ref.read(filtersProvider.notifier).setFilters({
             Filter.glutanFree: _glutenFreeFilter,
             Filter.lactoseFree: _lactoseFreeFilter,
             Filter.vegetarian: _veganFreeFilter,
             Filter.vegan: _veganFreeFilter,
           });
-          return false;
+          return true;
         },
         child: Column(
           children: [
